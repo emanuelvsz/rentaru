@@ -1,0 +1,167 @@
+[
+  {
+    "model": "product.movie",
+    "pk": "c1df5e15-6a3b-4d7c-bc9a-9c76d0c814ee",
+    "fields": {
+      "title": "Inception",
+      "description": "A thief who enters the dreams of others to steal their secrets.",
+      "duration": "PT2H28M",
+      "release_date": "2010-07-16",
+      "director": "Christopher Nolan",
+      "genre": "Sci-Fi",
+      "language": "English",
+      "cover_image": "https://images.app.goo.gl/3743DQ9e1wR5wLxq9",
+      "trailer_url": "https://www.youtube.com/watch?v=YoHD9XEInc0"
+    }
+  },
+  {
+    "model": "product.movie",
+    "pk": "72b9c157-2c3a-4b6d-8e70-341f8e30c8e0",
+    "fields": {
+      "title": "The Shawshank Redemption",
+      "description": "Two imprisoned men bond over several years, finding solace and eventual redemption through acts of common decency.",
+      "duration": "PT2H22M",
+      "release_date": "1994-09-23",
+      "director": "Frank Darabont",
+      "genre": "Drama",
+      "language": "English",
+      "cover_image": "https://example.com/shawshank_redemption.jpg",
+      "trailer_url": "https://www.youtube.com/watch?v=6hB3S9bIaco"
+    }
+  },
+  {
+    "model": "product.movie",
+    "pk": "a22aeb0e-c9ec-4ae9-9ac9-4f03f7e2f429",
+    "fields": {
+      "title": "The Dark Knight",
+      "description": "When the menace known as the Joker emerges from his mysterious past, he wreaks havoc and chaos on the people of Gotham.",
+      "duration": "PT2H32M",
+      "release_date": "2008-07-18",
+      "director": "Christopher Nolan",
+      "genre": "Action",
+      "language": "English",
+      "cover_image": "https://images.app.goo.gl/E3iQcnHcNRws3Xpx8",
+      "trailer_url": "https://www.youtube.com/watch?v=EXeTwQWrcwY"
+    }
+  },
+  {
+    "model": "product.movie",
+    "pk": "4c729e4f-7d22-4c6a-bb67-dcfc2b27cfe1",
+    "fields": {
+      "title": "Pulp Fiction",
+      "description": "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+      "duration": "PT2H34M",
+      "release_date": "1994-10-14",
+      "director": "Quentin Tarantino",
+      "genre": "Crime",
+      "language": "English",
+      "cover_image": "https://images.app.goo.gl/DixPZus4hbSuqZdF6",
+      "trailer_url": "https://www.youtube.com/watch?v=s7EdQ4FqbhY"
+    }
+  },
+  {
+    "model": "product.movie",
+    "pk": "7f5ae217-7ae2-48c9-b3e6-3c053a5a6948",
+    "fields": {
+      "title": "Forrest Gump",
+      "description": "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal, and other historical events unfold from the perspective of an Alabama man with an IQ of 75.",
+      "duration": "PT2H22M",
+      "release_date": "1994-07-06",
+      "director": "Robert Zemeckis",
+      "genre": "Drama",
+      "language": "English",
+      "cover_image": "https://images.app.goo.gl/rg7Fhb4vsys2hCor5",
+      "trailer_url": "https://www.youtube.com/watch?v=bLvqoHBptjg"
+    }
+  },
+  {
+    "model": "product.movie",
+    "pk": "67e9e757-2a02-4e47-8d04-23e2bfc2392a",
+    "fields": {
+      "title": "The Godfather",
+      "description": "An organized crime dynasty's aging patriarch transfers control of his clandestine empire to his reluctant son.",
+      "duration": "PT2H55M",
+      "release_date": "1972-03-24",
+      "director": "Francis Ford Coppola",
+      "genre": "Crime",
+      "language": "English",
+      "cover_image": "https://example.com/godfather.jpg",
+      "trailer_url": "https://www.youtube.com/watch?v=sY1S34973zA"
+    }
+  },
+  {
+    "model": "product.movie",
+    "pk": "321d63e7-71e1-4855-b1c2-1b3a2ee4e2ac",
+    "fields": {
+      "title": "The Matrix",
+      "description": "A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.",
+      "duration": "PT2H16M",
+      "release_date": "1999-03-31",
+      "director": "Lana Wachowski, Lilly Wachowski",
+      "genre": "Action",
+      "language": "English",
+      "cover_image": "https://example.com/matrix.jpg",
+      "trailer_url": "https://www.youtube.com/watch?v=m8e-FF8MsqU"
+    }
+  },
+  {
+    "model": "product.movie",
+    "pk": "ba4096a5-5b50-4dd3-85c4-eb98d4a181f2",
+    "fields": {
+      "title": "Titanic",
+      "description": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
+      "duration": "PT3H14M",
+      "release_date": "1997-12-19",
+      "director": "James Cameron",
+      "genre": "Drama",
+      "language": "English",
+      "cover_image": "https://example.com/titanic.jpg",
+      "trailer_url": "https://www.youtube.com/watch?v=2e-eXJ6HgkQ"
+    }
+  },
+  {
+    "model": "product.movie",
+    "pk": "7a01c6a7-5ab3-4af5-bf3a-727a49d27b1a",
+    "fields": {
+      "title": "The Lord of the Rings: The Fellowship of the Ring",
+      "description": "A quest to destroy the One Ring that has the power to bring about the downfall of its creator, the dark lord Sauron.",
+      "duration": "PT2H58M",
+      "release_date": "2001-12-19",
+      "director": "Peter Jackson",
+      "genre": "Adventure",
+      "language": "English",
+      "cover_image": "https://example.com/lotr_fellowship.jpg",
+      "trailer_url": "https://www.youtube.com/watch?v=V75dMMIW2B4"
+    }
+  },
+  {
+    "model": "product.movie",
+    "pk": "1b6c7d18-5688-4e1a-b550-1560ad78e6d9",
+    "fields": {
+      "title": "The Silence of the Lambs",
+      "description": "A young FBI cadet must receive the help of an incarcerated and manipulative cannibal killer to help catch another serial killer, a madman who skins his victims.",
+      "duration": "PT1H58M",
+      "release_date": "1991-02-14",
+      "director": "Jonathan Demme",
+      "genre": "Crime",
+      "language": "English",
+      "cover_image": "https://example.com/silence_of_the_lambs.jpg",
+      "trailer_url": "https://www.youtube.com/watch?v=W6Mm8Sbe__o"
+    }
+  },
+  {
+    "model": "product.movie",
+    "pk": "864429e0-8cda-40da-9f2e-81c17008401c",
+    "fields": {
+      "title": "Interstellar",
+      "description": "A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",
+      "duration": "PT2H49M",
+      "release_date": "2014-11-07",
+      "director": "Christopher Nolan",
+      "genre": "Sci-Fi",
+      "language": "English",
+      "cover_image": "https://example.com/interstellar.jpg",
+      "trailer_url": "https://www.youtube.com/watch?v=zSWdZVtXT7E"
+    }
+  }
+]
