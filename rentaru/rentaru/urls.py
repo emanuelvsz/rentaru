@@ -22,12 +22,12 @@ from drf_yasg import openapi
 
 schema_view = get_schema_view(
     openapi.Info(
-        title="Sua API",
+        title="Rentaru Backend",
         default_version='v1',
-        description="Descrição da sua API",
-        terms_of_service="https://www.sua-api.com/terms/",
-        contact=openapi.Contact(email="contato@sua-api.com"),
-        license=openapi.License(name="Sua Licença"),
+        description="API de locação de filmes.",
+        terms_of_service="http://localhost:8000",
+        contact=openapi.Contact(email="emanuelvilela.dev@gmail.com"),
+        license=openapi.License(name="No license"),
     ),
     public=True,
     permission_classes=(permissions.AllowAny,),

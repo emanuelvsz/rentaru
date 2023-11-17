@@ -10,3 +10,13 @@ services:
       - ./rentaru:/app
     ports:
       - 8000:8000
+
+  database:
+    image: postgres:14
+    environment:
+      POSTGRES_USER: rentaru
+      POSTGRES_PASSWORD: 12345678
+    ports:
+      - 5432:5432
+    volumes:
+      - ./docker/database/data:/var/lib/postgresql/data
