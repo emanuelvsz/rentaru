@@ -1,10 +1,12 @@
-version: '3'
-
+version: "3"
+name: "rentaru"
 services:
   api:
-    image: python:3.10
-    command: bash -c "pip install -r requirements.txt && python manage.py migrate && python manage.py runserver 0.0.0.0:8001"
+    build:
+      context: .
+      dockerfile: ./docker/api/Dockerfile.api
+    env_file: .env.docker
     volumes:
-      - ./seu_projeto:/app
+      - ./rentaru:/app
     ports:
-      - "8001:8001"
+      - 8000:8000

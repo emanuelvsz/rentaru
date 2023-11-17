@@ -9,7 +9,7 @@ class MovieListCreateView(generics.ListCreateAPIView):
     serializer_class = MovieSerializer
 
 class MovieListApiView(APIView):
-    def get(self, request, *args, **kwargs):
+    def get(self, request):
         movies = Movie.objects.all()
         serializer = MovieSerializer(movies, many=True)
         return Response(serializer.data)

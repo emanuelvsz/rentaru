@@ -4,3 +4,4 @@ django-filter==23.3
 djangorestframework==3.14.0
 django-cors-headers==4.3.0
 openai==0.28.1
+drf-yasg==1.21.7
