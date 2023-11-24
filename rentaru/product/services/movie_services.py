@@ -65,12 +65,8 @@ class MovieService:
         movies_rented = MovieRental.objects.all()
         rent_list = []
         for movie_rented in movies_rented:
-            print("------=======================------")
-            print(movie_rented.movie_id)
-            print(movie_rented.client_id)            
-            print("------=======================------")
-            movie = Movie.objects.filter(id=movie_rented.movie).first()
-            client = Client.objects.filter(id=movie_rented.client).first()
+            movie = Movie.objects.filter(id=movie_rented.movie_id_id).first()
+            client = Client.objects.filter(id=movie_rented.client_id_id).first()
             rent_info = {
                 'movie': {
                     'id': movie.id,

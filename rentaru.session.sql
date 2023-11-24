@@ -1,1 +1,1 @@
-select * from product_movie;
+select * from product_movierental;
