@@ -1,0 +1,18 @@
+[
+    {
+        "model": "product.client",
+        "pk": "817f0ba5-ecf1-4314-ab50-a3998a874381",
+        "fields": {
+            "name": "Maurício Júnior",
+            "cpf": "555.434.929-03"
+        }
+    },
+    {
+      "model": "product.client",
+      "pk": "1a0621e5-e7b2-4286-9ce8-834a248419a3",
+      "fields": {
+          "name": "Alice Julia",
+          "cpf": "444.545.020-30"
+      }
+  }
+]
