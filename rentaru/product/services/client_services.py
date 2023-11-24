@@ -28,11 +28,13 @@ class ClientServices:
         client.save()
         return client
     
+    # TODO: FIX THIS ERROR
     def client_rent_movie(self, rent_data):
+        print("=================", rent_data, "===================")
         MovieRental.objects.create(
             rented_at=rent_data['rented_at'],
-            movie_id=rent_data['movie_id'],
-            client_id=rent_data['client_id'],
+            movie=rent_data['movie_id'],
+            client=rent_data['client_id'],
             price=rent_data['price'],
             payment_type=rent_data['payment_type']
         )

@@ -69,6 +69,6 @@ class ClientRentMovieAPIView(APIView):
         serializer = MovieRentalSerializer(data=request.data)
         if not serializer.is_valid():
             return Response(serializer.errors, status=422) 
-        print(serializer)
+        print("||||||||||||||", serializer, "||||||||||||||")
         client_rent_movie(serializer.validated_data)
         return Response(status=201)

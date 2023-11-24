@@ -1,12 +1,11 @@
 from django.db import models
-
-from .client import *
-from .movie import *
+from .client import Client
+from .movie import Movie
 
 
 class MovieRental(models.Model):
-    client_id = models.ForeignKey(Client, on_delete=models.CASCADE, related_name='client_id')
-    movie_id = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name='movie_id')
+    client = models.OneToOneField(Client, on_delete=models.CASCADE)
+    movie = models.OneToOneField(Movie, on_delete=models.CASCADE)
     rented_at = models.DateField()
-    payment_type = models.CharField()
+    payment_type = models.CharField(max_length=255)
     price = models.FloatField(default=0)
