@@ -5,7 +5,7 @@ class Movie(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
     title = models.CharField(max_length=200)
     description = models.TextField()
-    duration = models.DurationField()
+    duration = models.CharField()
     release_date = models.DateField()
     director = models.CharField(max_length=100)
     genre = models.CharField(max_length=50)

@@ -9,3 +9,4 @@ class MovieRental(models.Model):
     movie_id = models.ForeignKey(Movie, on_delete=models.CASCADE, related_name='movie_id')
     rented_at = models.DateField()
     payment_type = models.CharField()
+    price = models.FloatField(default=0)

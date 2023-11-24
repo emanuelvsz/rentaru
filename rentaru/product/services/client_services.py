@@ -1,9 +1,13 @@
-from product.models import Client
+from product.models import Client, MovieRental
 
 class ClientServices:
     def get_clients(self):
         clients = Client.objects.all()
         return clients
+    
+    def get_client_by_id(self, client_id):
+        client = Client.objects.filter(id=client_id).first()
+        return client
     
     def create_client(self, name, cpf):
         new_client = Client(name=name, cpf=cpf)
@@ -23,6 +27,14 @@ class ClientServices:
             client.cpf = new_cpf
         client.save()
         return client
-
+    
+    def client_rent_movie(self, rent_data):
+        MovieRental.objects.create(
+            rented_at=rent_data['rented_at'],
+            movie_id=rent_data['movie_id'],
+            client_id=rent_data['client_id'],
+            price=rent_data['price'],
+            payment_type=rent_data['payment_type']
+        )
 
 

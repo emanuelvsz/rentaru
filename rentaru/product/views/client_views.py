@@ -10,11 +10,22 @@ from product.selectors import *
 class ClientListAPIView(APIView):
     permission_classes = []
 
-    def get(self, request):
+    def get(self, _):
         clients = get_clients()
         serializer = ClientSerializer(clients, many=True)
         return Response(serializer.data)
 
+class ClientByIDAPIView(APIView): 
+    permission_classes = []
+    
+    def get(self, _, client_id):
+        client = get_client_by_id(client_id)
+        serializer = ClientSerializer(client)
+        return Response(serializer.data)
+
+class ClientCreateAPIView(APIView): 
+    permission_classes = []
+    
     @swagger_auto_schema(request_body=ClientForCreateSerializer, responses={201: ClientSerializer()})
     def post(self, request):
         name = request.data.get('name', '')
@@ -26,15 +37,8 @@ class ClientListAPIView(APIView):
         else:
             return Response({'message': 'Erro ao criar cliente'}, status=status.HTTP_400_BAD_REQUEST)
 
-class ClientDetailAPIView(APIView):
+class ClientUpdateAPIView(APIView):
     permission_classes = []
-
-    def delete(self, request, client_id):
-        deleted = delete_client(client_id)
-        if deleted:
-            return Response({'message': 'Cliente excluído com sucesso'}, status=status.HTTP_204_NO_CONTENT)
-        else:
-            return Response({'message': 'Cliente não encontrado'}, status=status.HTTP_404_NOT_FOUND)
 
     @swagger_auto_schema(request_body=ClientForCreateSerializer, responses={201: ClientSerializer()})
     def put(self, request, client_id):
@@ -46,3 +50,25 @@ class ClientDetailAPIView(APIView):
             return Response(serializer.data)
         else:
             return Response({'message': 'Cliente não encontrado'}, status=status.HTTP_404_NOT_FOUND)
+        
+class ClientDeleteAPIView(APIView):
+    permission_classes = []
+    
+    def delete(self, _, client_id):
+        deleted = delete_client(client_id)
+        if deleted:
+            return Response({'message': 'Cliente excluído com sucesso'}, status=status.HTTP_204_NO_CONTENT)
+        else:
+            return Response({'message': 'Cliente não encontrado'}, status=status.HTTP_404_NOT_FOUND)
+
+class ClientRentMovieAPIView(APIView):
+    permission_classes = []
+    
+    @swagger_auto_schema(request_body=MovieRentalSerializer, responses={201: ClientSerializer()})
+    def post(self, request):
+        serializer = MovieRentalSerializer(data=request.data)
+        if not serializer.is_valid():
+            return Response(serializer.errors, status=422) 
+        print(serializer)
+        client_rent_movie(serializer.validated_data)
+        return Response(status=201)
